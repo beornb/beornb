@@ -47,8 +47,8 @@ export default function Navbar() {
           BEORN<span className="text-[var(--color-bright-purple)]">.</span>
         </Link>
         <nav className="hidden md:flex gap-10 text-xs font-semibold uppercase tracking-widest text-secondary">
-          <a href="#experience" onClick={(e) => scrollTo(e, "about")} className="hover:text-foreground hover:glow-text transition-all">About</a>
           <a href="#experience" onClick={(e) => scrollTo(e, "experience")} className="hover:text-foreground hover:glow-text transition-all">Experience</a>
+          <a href="#about" onClick={(e) => scrollTo(e, "about")} className="hover:text-foreground hover:glow-text transition-all">About</a>
           <a href="#projects" onClick={(e) => scrollTo(e, "projects")} className="hover:text-foreground hover:glow-text transition-all">Projects</a>
           <a href="#skills" onClick={(e) => scrollTo(e, "skills")} className="hover:text-foreground hover:glow-text transition-all">Skills</a>
           <a href="#contact" onClick={(e) => scrollTo(e, "contact")} className="hover:text-[var(--color-bright-purple)] transition-all">Contact</a>

@@ -26,7 +26,7 @@ export default function About() {
 
   return (
     <section id="about" ref={containerRef} className="py-24 relative z-10 px-4 md:px-0">
-      <div className="container mx-auto max-w-4xl text-lg md:text-xl text-secondary leading-relaxed font-light">
+      <div className="container mx-auto max-w-4xl text-lg md:text-xl text-secondary leading-relaxed ">
         <h2 className="text-4xl md:text-5xl font-black mb-12 tracking-tight uppercase text-center md:text-left text-foreground">
           About_<span className="text-[var(--color-bright-purple)]">Me</span>
         </h2>

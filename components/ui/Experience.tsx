@@ -14,10 +14,10 @@ const expData = [
     date: "Apr 2024 - Present",
     location: "Vienna, Austria",
     description: [
-      "Reengineered the architecture of Morphers entire mobile application using Expo, reducing crashes and bug reports by 80%.",
       "Rolled out a company-wide AI-augmented workflow for AI-integrated features, significantly increasing development output, doubling feature releases in half the time and reducing post-release bugs.",
       "Set up a standardized AI tooling stack and usage policy, reducing AI-related coding issues and information leaks.",
       "Optimized AWS infrastructure for Morpher, reducing our monthly AWS bill by 50%.",
+      "Reengineered the architecture of Morphers entire mobile application using Expo, reducing crashes and bug reports by 80%.",
     ]
   },
   {

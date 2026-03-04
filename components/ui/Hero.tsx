@@ -44,7 +44,7 @@ export default function Hero() {
           <span className="text-foreground font-semibold">VP of Engineering</span> combining strong traditional development principles with AI augmentation to deliver scalable, solid solutions.
         </p>
         <p className="text-base md:text-lg">
-          I have evolved from leading traditional teams to building lean, AI-augmented teams capable of delivering secure systems on time and at scale. Leading execution, architecture, and engineering culture with full responsibility, tightly aligned to business strategy.
+          I build high-velocity engineering teams and craft custom freelance solutions, turning technical execution into a massive competitive advantage.
         </p>
       </motion.div>
 

@@ -145,7 +145,7 @@ export default function Skills() {
         <div className="space-y-10">
           {technologies.map((tech, i) => (
             <div key={i} className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
-              <div className="w-48 text-muted uppercase tracking-widest text-sm font-bold flex-shrink-0">
+              <div className="w-48 text-secondary uppercase tracking-widest text-sm font-bold flex-shrink-0">
                 {"// "} {tech.group}
               </div>
               <div className="flex flex-wrap gap-3">
@@ -153,7 +153,7 @@ export default function Skills() {
                   <motion.div 
                     key={j} 
                     whileHover={{ scale: 1.05, borderColor: "var(--color-bright-pink)", color: "white" }}
-                    className="group relative tech-pill px-4 py-2 rounded-md bg-white/5 border border-white/10 text-secondary text-sm font-mono cursor-default transition-colors"
+                    className="group relative tech-pill px-4 py-2 rounded-md bg-white/50 dark:bg-white/5 border border-white/10 text-secondary text-sm font-mono cursor-default transition-colors"
                   >
                     {item.name}
                     {item.tooltip && (

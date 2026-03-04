@@ -35,7 +35,7 @@ export default function Services() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "center center",
-        end: "+=1500", // Adds 1500px of artificial scroll distance
+        end: "+=500", // Adds 1500px of artificial scroll distance
         scrub: 1,
         pin: true,
       }
