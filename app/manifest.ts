@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: 'Beorn Bishop',
     description: 'Professional portfolio and freelance services for Beorn Bishop.',
     start_url: '/',
-    display: 'standalone',
+    display: 'browser',
     background_color: '#ffffff',
     theme_color: '#ffffff',
     icons: [

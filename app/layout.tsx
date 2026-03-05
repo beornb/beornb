@@ -17,8 +17,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://beornb.com"),
   title: "Beorn Bishop | Engineering Leader",
   description: "Portfolio and CV of Beorn Bishop - Engineering Leader combining strong traditional development principles with AI augmentation to deliver scalable, solid solutions.",
+  openGraph: {
+    title: "Beorn Bishop | Engineering Leader",
+    description: "Portfolio and CV of Beorn Bishop - Engineering Leader combining strong traditional development principles with AI augmentation to deliver scalable, solid solutions.",
+    url: "https://beornb.com",
+    siteName: "Beorn Bishop Portfolio",
+    images: [
+      {
+        url: "/images/og_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Beorn Bishop - Engineering Leader Preview Image",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Beorn Bishop | Engineering Leader",
+    description: "Portfolio and CV of Beorn Bishop - Engineering Leader combining strong traditional development principles with AI augmentation to deliver scalable, solid solutions.",
+    images: ["/images/og_image.png"],
+  },
 };
 
 export default function RootLayout({
