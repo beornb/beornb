@@ -143,8 +143,9 @@ export default function Footer() {
           variants={itemVariants} 
           className="flex justify-center mb-16 relative perspective-1000"
         >
-          <motion.div
-            className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[var(--color-glass-border)] shadow-[0_0_30px_rgba(153,3,195,0.3)] bg-[var(--color-background)]"
+          <motion.a
+            href="mailto:mailto@beornb.com"
+            className="block relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[var(--color-glass-border)] shadow-[0_0_30px_rgba(153,3,195,0.3)] bg-[var(--color-background)]"
             whileHover={{ 
               scale: 1.1,
               rotateY: 15,
@@ -164,7 +165,7 @@ export default function Footer() {
             
             {/* Overlay scanline effect */}
             <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.1)_50%)] bg-[length:100%_4px] opacity-20" />
-          </motion.div>
+          </motion.a>
           
           {/* Background decorative glow for the avatar */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[var(--color-bright-purple)] rounded-full blur-[60px] opacity-20 -z-10 animate-pulse" />

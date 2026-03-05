@@ -31,7 +31,7 @@ export default function Hero() {
         transition={{ delay: 0.3, duration: 0.5 }}
         className="text-2xl md:text-3xl font-bold tracking-tight text-foreground mb-6 uppercase"
       >
-        VP of Engineering
+        Engineering Leader
       </motion.h2>
 
       <motion.div 
@@ -41,7 +41,7 @@ export default function Hero() {
         className="max-w-3xl space-y-4 text-secondary text-lg md:text-xl leading-relaxed"
       >
         <p>
-          <span className="text-foreground font-semibold">VP of Engineering</span> combining strong traditional development principles with AI augmentation to deliver scalable, solid solutions.
+          <span className="text-foreground font-semibold">Engineering Leader</span> combining strong traditional development principles with AI augmentation to deliver scalable, robust solutions.
         </p>
         <p className="text-base md:text-lg">
           I build high-velocity engineering teams and craft custom freelance solutions, turning technical execution into a massive competitive advantage.

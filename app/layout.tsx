@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Beorn Bishop | VP of Engineering",
-  description: "Portfolio and CV of Beorn Bishop - VP of Engineering combining strong traditional development principles with AI augmentation to deliver scalable, solid solutions.",
+  title: "Beorn Bishop | Engineering Leader",
+  description: "Portfolio and CV of Beorn Bishop - Engineering Leader combining strong traditional development principles with AI augmentation to deliver scalable, solid solutions.",
 };
 
 export default function RootLayout({

@@ -1,10 +1,12 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { Eye } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +17,7 @@ const projects = [
     description: "Reengineered mobile application zero-downtime microservices and rolled out an AI-augmented workflow. Set up a standardized AI tooling stack cutting AWS infrastructure costs by 50%. Led migration from self-hosted sidechain to public Base chain.",
     tech: ["React Native", "Expo", "AWS", "Node.js", "AI Tooling"],
     link: "https://morpher.com",
+    image: "/projects/morpher.png",
     hasVideo: false
   },
   {
@@ -23,7 +26,8 @@ const projects = [
     description: "Rolled out a full-stack market trading app with onboarding, on-chain deposits/withdrawals, Fiat ramps, and on-chain trading capabilities. Concept to production launch achieved within 6 weeks, securing 500+ active users instantly.",
     tech: ["Next.js", "Web3", "Smart Contracts", "PostgreSQL"],
     link: "#",
-    hasVideo: true
+    image: "/projects/frenzy.finance.png",
+    hasVideo: false
   },
   {
     title: "UPD.io",
@@ -31,9 +35,49 @@ const projects = [
     description: "Created landing page and proof-of-concept application for a new privacy stablecoin. Built features for currency swaps, private transactions, and secure token transfers to support fundraising activities.",
     tech: ["Next.js", "TypeScript", "Blockchain Analytics"],
     link: "https://upd.io",
-    hasVideo: true
+    image: "/projects/upd.png",
+    hasVideo: false
   }
 ];
+
+const ProjectLink = ({ link }: { link: string }) => {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+  const linkRef = useRef<HTMLAnchorElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!linkRef.current) return;
+    const rect = linkRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    setMousePos({ x, y });
+  };
+
+  return (
+    <a 
+      ref={linkRef}
+      href={link} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => { setIsHovering(false); setMousePos({ x: 0, y: 0 }); }}
+      className="inline-flex w-fit items-center gap-3 text-sm font-bold uppercase tracking-widest text-foreground hover:text-[var(--color-bright-blue)] transition-all group/link py-2 pr-2"
+    >
+      View Project 
+      <motion.span 
+        animate={{
+          x: isHovering ? mousePos.x * 0.4 : 0,
+          y: isHovering ? mousePos.y * 0.4 : 0,
+        }}
+        transition={{ type: "spring", stiffness: 300, damping: 15, mass: 0.1 }}
+        className="p-2 rounded-full bg-[var(--color-background)] border border-zinc-700 group-hover/link:bg-[var(--color-bright-blue)] group-hover/link:border-[var(--color-bright-blue)] group-hover/link:text-black transition-colors"
+      >
+        <Eye className="w-4 h-4" />
+      </motion.span>
+    </a>
+  );
+};
 
 export default function Projects() {
   const containerRef = useRef<HTMLElement>(null);
@@ -78,8 +122,20 @@ export default function Projects() {
                     <span className="text-sm font-mono">[Video Demo Embed]</span>
                   </div>
                 ) : (
-                  <div className="absolute inset-0 flex items-center justify-center text-zinc-700 font-mono">
-                    [Project Showcase Image]
+                  <div className="absolute inset-0 flex items-center justify-center rounded-xl overflow-hidden">
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={`${project.title} screenshot`}
+                        width={800}
+                        height={450}
+                        className="w-full h-full object-cover filter grayscale-[0.8] group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="text-zinc-700 font-mono">
+                        [Project Showcase Image]
+                      </div>
+                    )}
                   </div>
                 )}
                 
@@ -109,14 +165,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex w-fit items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-[var(--color-bright-blue)] transition-colors"
-                >
-                  View Project <span className="text-lg">↗</span>
-                </a>
+                <ProjectLink link={project.link} />
               </div>
             </div>
           ))}

@@ -99,8 +99,7 @@ export default function Experience() {
               
               {/* Timeline marker point */}
               <div className={`absolute top-0 w-4 h-4 rounded-full bg-[var(--background)] border-2 border-[var(--color-bright-purple)] shadow-[0_0_10px_var(--color-bright-purple)] z-10 
-                left-[-35px] md:left-auto
-                ${index % 2 === 0 ? 'md:right-[-9px]' : 'md:left-[-9px]'}
+                left-[-35px] ${index % 2 === 0 ? 'md:left-auto md:right-[-9px]' : 'md:left-[-9px]'}
               `} />
               
               <div className="glass-panel p-8 md:p-10 rounded-xl relative hover:border-[var(--color-bright-purple)] transition-colors duration-500 group">
