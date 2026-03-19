@@ -37,43 +37,55 @@ const competencies = [
 
 
 const technologies = [
-  { group: "Frontend", items: [
-    { name: "React", tooltip: "8+ Years" },
-    { name: "Next.js", tooltip: "5+ Years" },
-    { name: "Vue", tooltip: "3+ Years" },
-    { name: "Angular", tooltip: "Legacy Expert" },
-    { name: "React Native", tooltip: "3+ Years" },
-    { name: "Tailwind", tooltip: "Daily Driver" },
-    { name: "Shadcn", tooltip: "Daily Driver" },
-    { name: "Framer Motion" },
-    { name: "GSAP" }
-  ] },
-  { group: "Backend", items: [
-    { name: "NestJS", tooltip: "4+ Years" },
-    { name: "Express.js", tooltip: "8+ Years" },
-    { name: "Ruby on Rails", tooltip: "Legacy Expert" },
-    { name: "ASP.NET", tooltip: "10+ Years - Expert" }
-  ] },
-  { group: "Languages", items: [
-    { name: "JavaScript", tooltip: "15+ Years - Expert" },
-    { name: "TypeScript", tooltip: "8+ Years - Expert" },
-    { name: "C#", tooltip: "15+ Years - Expert" },
-    { name: "VB.NET", tooltip: "Legacy Expert" },
-    { name: "Solidity", tooltip: "3+ Years" }
-  ] },
-  { group: "Databases & Cache", items: [
-    { name: "PostgreSQL", tooltip: "10+ Years" },
-    { name: "Redis", tooltip: "8+ Years" },
-    { name: "Prisma", tooltip: "4+ Years" },
-    { name: "Sequelize" }
-  ] },
-  { group: "Infrastructure", items: [
-    { name: "Docker", tooltip: "8+ Years" },
-    { name: "Kubernetes", tooltip: "5+ Years" },
-    { name: "AWS", tooltip: "10+ Years" },
-    { name: "Kafka" },
-    { name: "RabbitMQ" }
-  ] },
+  {
+    group: "Frontend", items: [
+      { name: "React", tooltip: "8+ Years" },
+      { name: "Next.js", tooltip: "5+ Years" },
+      { name: "Vue", tooltip: "3+ Years" },
+      { name: "Angular", tooltip: "Legacy Expert" },
+      { name: "React Native", tooltip: "3+ Years" },
+      { name: "Tailwind", tooltip: "Daily Driver" },
+      { name: "Shadcn", tooltip: "Daily Driver" },
+      { name: "Framer Motion" },
+      { name: "GSAP" }
+    ]
+  },
+  {
+    group: "Backend", items: [
+      { name: "NestJS", tooltip: "4+ Years" },
+      { name: "Express.js", tooltip: "8+ Years" },
+      { name: "Ruby on Rails", tooltip: "Legacy Expert" },
+      { name: "ASP.NET", tooltip: "10+ Years - Expert" }
+    ]
+  },
+  {
+    group: "Languages", items: [
+      { name: "JavaScript", tooltip: "15+ Years - Expert" },
+      { name: "TypeScript", tooltip: "8+ Years - Expert" },
+      { name: "C#", tooltip: "15+ Years - Expert" },
+      { name: "VB.NET", tooltip: "Legacy Expert" },
+      { name: "Solidity", tooltip: "3+ Years" }
+    ]
+  },
+  {
+    group: "Databases & Cache", items: [
+      { name: "PostgreSQL", tooltip: "10+ Years" },
+      { name: "Redis", tooltip: "8+ Years" },
+      { name: "Prisma", tooltip: "4+ Years" },
+      { name: "Sequelize" }
+    ]
+  },
+  {
+    group: "Infrastructure", items: [
+      { name: "Docker", tooltip: "3+ Years" },
+      { name: "Terraform", tooltip: "1+ Years" },
+      { name: "CloudFormation", tooltip: "2+ Years" },
+      { name: "Kubernetes", tooltip: "1+ Years" },
+      { name: "AWS", tooltip: "10+ Years" },
+      { name: "Kafka" },
+      { name: "RabbitMQ" }
+    ]
+  },
   { group: "API & Monitoring", items: [{ name: "GraphQL" }, { name: "tRPC", tooltip: "2+ Years" }, { name: "PostHog" }, { name: "Sentry" }, { name: "Datadog" }] },
   { group: "Blockchain/Web3", items: [{ name: "Ethereum", tooltip: "Smart Contracts" }, { name: "Viem", tooltip: "Primary Web3 toolkit" }, { name: "Smart Contracts" }, { name: "etc." }] },
   { group: "General", items: [{ name: "CI/CD", tooltip: "GH Actions / GitLab" }, { name: "Testing", tooltip: "Jest / Vitest / Cypress" }, { name: "DevOps" }] }
@@ -118,7 +130,7 @@ export default function Skills() {
         <h2 className="text-4xl md:text-5xl font-black mb-16 tracking-tight uppercase text-center md:text-left">
           Core_<span className="text-[var(--color-light-teal)]">Competencies</span>
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           {competencies.map((comp, i) => (
             <div key={i} className="comp-card glass-panel p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300">
@@ -141,7 +153,7 @@ export default function Skills() {
             <span className="text-sm border border-[var(--color-bright-pink)] px-3 py-1 rounded-full text-foreground ml-4 align-middle">Live & Breathing</span>
           </span>
         </h2>
-        
+
         <div className="space-y-10">
           {technologies.map((tech, i) => (
             <div key={i} className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
@@ -150,8 +162,8 @@ export default function Skills() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {tech.items.map((item, j) => (
-                  <motion.div 
-                    key={j} 
+                  <motion.div
+                    key={j}
                     whileHover={{ scale: 1.05, borderColor: "var(--color-bright-pink)", color: "white" }}
                     className="group relative tech-pill px-4 py-2 rounded-md bg-white/50 dark:bg-white/5 border border-white/10 text-secondary text-sm font-mono cursor-default transition-colors"
                   >
