@@ -46,6 +46,7 @@ const technologies = [
       { name: "React Native", tooltip: "3+ Years" },
       { name: "Tailwind", tooltip: "Daily Driver" },
       { name: "Shadcn", tooltip: "Daily Driver" },
+      { name: "Svelte", tooltip: "Multiple Projects" },
       { name: "Framer Motion" },
       { name: "GSAP" }
     ]
@@ -55,6 +56,7 @@ const technologies = [
       { name: "NestJS", tooltip: "4+ Years" },
       { name: "Express.js", tooltip: "8+ Years" },
       { name: "Ruby on Rails", tooltip: "Legacy Expert" },
+      { name: "SvelteKit", tooltip: "Multiple Projects" },
       { name: "ASP.NET", tooltip: "10+ Years - Expert" }
     ]
   },
@@ -62,6 +64,7 @@ const technologies = [
     group: "Languages", items: [
       { name: "JavaScript", tooltip: "15+ Years - Expert" },
       { name: "TypeScript", tooltip: "8+ Years - Expert" },
+      { name: "Go", tooltip: "Multiple Projects - Intermediate" },      
       { name: "C#", tooltip: "15+ Years - Expert" },
       { name: "VB.NET", tooltip: "Legacy Expert" },
       { name: "Solidity", tooltip: "3+ Years" }
@@ -86,7 +89,7 @@ const technologies = [
       { name: "RabbitMQ" }
     ]
   },
-  { group: "API & Monitoring", items: [{ name: "GraphQL" }, { name: "tRPC", tooltip: "2+ Years" }, { name: "PostHog" }, { name: "Sentry" }, { name: "Datadog" }] },
+  { group: "API & Monitoring", items: [{ name: "GraphQL" }, { name: "WebSocket Services", tooltip: "5+ Years" }, { name: "tRPC", tooltip: "2+ Years" }, { name: "PostHog" }, { name: "Sentry" }, { name: "Datadog" }] },
   { group: "Blockchain/Web3", items: [{ name: "Ethereum", tooltip: "Smart Contracts" }, { name: "Viem", tooltip: "Primary Web3 toolkit" }, { name: "Smart Contracts" }, { name: "etc." }] },
   { group: "General", items: [{ name: "CI/CD", tooltip: "GH Actions / GitLab" }, { name: "Testing", tooltip: "Jest / Vitest / Cypress" }, { name: "DevOps" }] }
 ];
