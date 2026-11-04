@@ -58,3 +58,13 @@ To fire up the environment locally, make sure you have [Node.js](https://nodejs.
 Copyright © Beorn Bishop. All rights reserved. 
 
 The underlying code patterns and animations are available for educational viewing, but the personal data (experience, projects, photos, CV) remains explicitly under copyright and should not be duplicated or passed off as your own work.
+
+## Remote Deploy
+
+```bash
+bun run build
+ssh root@178.105.18.172 "rm -rf /var/www/beornb.com/* /var/www/beornb.com/.[!.]*"
+scp -r out/* root@178.105.18.172:/var/www/beornb.com/
+ssh root@178.105.18.172 "chown -R www-data:www-data /var/www/beornb.com"
+```
+
